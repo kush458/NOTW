@@ -6,7 +6,7 @@ import * as Animatable from 'react-native-animatable';
 import NetInfo from '@react-native-community/netinfo';
 import { Feather, Ionicons, Entypo } from '@expo/vector-icons';
 import LottieView from 'lottie-react-native';
-import { KEY } from "@env";
+import { NEWS_KEY } from "@env";
 
 const SearchScreen = (props) => {
     const [articles, setArticles] = useState([]);
@@ -17,7 +17,7 @@ const SearchScreen = (props) => {
     const [bounceNews, setBounceNews] = useState(true);
     const animation = useRef(null);
     const noResultsAnimation = useRef(null);
-    const numArticles = 16; const key1 = KEY;
+    const numArticles = 16; const key1 = NEWS_KEY;
 
     useEffect(() => {
         if(startSearching && text.length >= 1 && isConnected){

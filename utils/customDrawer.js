@@ -4,6 +4,7 @@ import { DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawe
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons, Feather, Entypo } from '@expo/vector-icons'
 import NetInfo from '@react-native-community/netinfo';
+import { WEATHER_KEY } from '@env';
 
 const DrawerImage = (props) => {
     /* 
@@ -24,7 +25,7 @@ const DrawerImage = (props) => {
     const [wind, setWind] = useState('');
     const [humidity, setHumidity] = useState('');
     const [weather, setWeather] = useState('');
-    const key1 = "958e2a3497d66459264ef8d61b937347";
+    const key1 = WEATHER_KEY;
     const weatherToIcon = {
         "Thunderstorm" : require("../assets/17.png"),
         "Clear" : (currTime >= evening || currTime <= morning) ? require("../assets/10.png") : require("../assets/26.png"),

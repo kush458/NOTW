@@ -10,7 +10,7 @@ import { useIsFocused } from '@react-navigation/native';
 import LottieView from 'lottie-react-native';
 
 // Note: if KEY changes in .env, we need to expo r -c to make those changes take effect in the app code
-import { KEY } from '@env';
+import { NEWS_KEY } from '@env';
 
 
 const HorizontalNews = (props) => {
@@ -29,7 +29,7 @@ const HomePage = (props) => {
     const [refreshing, setRefreshing] = useState(false);
     const [articles, setArticles] = useState([]);
     const [isConnected, setIsConnected] = useState(true);
-    const key1 = KEY;
+    const key1 = NEWS_KEY;
     const isFocused = useIsFocused();
     const numArticles = 12;
 
